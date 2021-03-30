@@ -1,3 +1,118 @@
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.gray {
+  color: #969696;
+}
+
+.very-dark-blue {
+  color: #151f29;
+}
+
 body {
   font-family: "Libre Franklin", sans-serif;
+}
+body .content {
+  min-height: 100vh;
+}
+body .content .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .content .cta {
+  color: #151f29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .content form {
+  max-width: 696px;
+  margin: 0 auto;
+}
+body .content form .form-group {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+body .content form .form-group input {
+  color: #4f7df3;
+  border: 1px solid #4f7df3;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  border-radius: 3em;
+}
+body .content form .form-group input::placeholder {
+  color: #4f7df3;
+}
+body .content form .form-group .btn-primary {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  border-radius: 3em;
+}
+body .content form .form-group .input-error {
+  color: #ff5263;
+  border: 1px solid #ff5263;
+}
+body .content form .form-group .input-error::placeholder {
+  color: #ff5263;
+}
+body .content form .form-group .input-error:focus {
+  box-shadow: 0 0 0 0.25rem #f98b88;
+}
+body .content .image {
+  max-width: 696px;
+  margin: 0 auto;
+}
+body .content .image img {
+  width: 100%;
+  height: auto;
+}
+body .content .social-links {
+  display: flex;
+  justify-content: center;
+}
+body .content .social-links a {
+  transition: all 0.2s ease;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 2em;
+  border: solid 1px #4f7df3;
+  padding: 0.4em;
+  width: 1.75em;
+  height: 1.75em;
+  color: #4f7df3;
+}
+body .content .social-links a:hover {
+  color: white;
+  background-color: #4f7df3;
+}
+body .content .copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+body .content .copyright p {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body .content form .form-group {
+    grid-template-columns: 60% 40%;
+  }
+  body .content form .form-group .btn-primary {
+    margin-left: 10px;
+  }
 }

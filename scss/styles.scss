@@ -5,11 +5,126 @@ $lightRed: hsl(354, 100%, 66%);
 $gray: hsl(0, 0%, 59%);
 $veryDarkBlue: hsl(209, 33%, 12%);
 
+.fw-300 {
+    font-weight: 300;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.gray {
+    color: $gray;
+}
+.very-dark-blue {
+    color: $veryDarkBlue;
+}
+
 body {
     font-family: "Libre Franklin", sans-serif;
+    .content {
+        min-height: 100vh;
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cta {
+            color: $veryDarkBlue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        form {
+            max-width: 696px;
+            margin: 0 auto;
+            .form-group {
+                display: grid;
+                grid-template-columns: 1fr;
+                input {
+                    color: $blue;
+                    border: 1px solid $blue;
+                    padding-top: 0.75em;
+                    padding-bottom: 0.75em;
+                    border-radius: 3em;
+                }
+                input::placeholder {
+                    color: $blue;
+                }
+                .btn-primary {
+                    padding-top: 0.75em;
+                    padding-bottom: 0.75em;
+                    border-radius: 3em;
+                }
+
+                .input-error {
+                    color: $lightRed;
+                    border: 1px solid $lightRed;
+                }
+                .input-error::placeholder {
+                    color: $lightRed;
+                }
+                .input-error:focus {
+                    box-shadow: 0 0 0 0.25rem #f98b88;
+                }
+            }
+        }
+        .image {
+            max-width: 696px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            a {
+                transition: all 0.2s ease;
+                margin-left: 25px;
+                margin-right: 25px;
+                font-size: 2em;
+                text-align: center;
+                border-radius: 2em;
+                border: solid 1px $blue;
+                padding: 0.4em;
+                width: 1.75em;
+                height: 1.75em;
+                color: $blue;
+            }
+            a:hover {
+                color: white;
+                background-color: $blue;
+            }
+        }
+        .copyright {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            p {
+                text-align: center;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        .content {
+            form {
+                .form-group {
+                    grid-template-columns: 60% 40%;
+                    .btn-primary {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width: 992px) {
 }
